@@ -74,23 +74,6 @@ h1 {
   letter-spacing: 0.5px;
 }
 
-.avatar-container {
-  width: 550px;
-  height: 840px;
-  margin: 2rem auto;
-  background: var(--card-bg);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.avatar-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
 .content {
   max-width: 800px;
   margin: 0 auto;

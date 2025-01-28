@@ -62,26 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     header.style.transform = `translateY(${scrolled * 0.3}px)`;
   });
 
-  // Add hover effect to avatar container
-  const avatarContainer = document.querySelector(".avatar-container");
-  if (avatarContainer) {
-    avatarContainer.addEventListener("mousemove", (e) => {
-      const rect = avatarContainer.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const xPercent = (x / rect.width - 0.5) * 20;
-      const yPercent = (y / rect.height - 0.5) * 20;
-
-      avatarContainer.style.transform = `perspective(1000px) rotateX(${-yPercent}deg) rotateY(${xPercent}deg) scale3d(1.02, 1.02, 1.02)`;
-    });
-
-    avatarContainer.addEventListener("mouseleave", () => {
-      avatarContainer.style.transform =
-        "perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)";
-    });
-  }
-
   // Add initial animation to the title
   const title = document.querySelector("h1");
   if (title) {
