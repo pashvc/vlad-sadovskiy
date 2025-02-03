@@ -4,74 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vlad Sadovskiy</title>
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, sans-serif;
+        background: #373636;
+      }
+      .container {
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+      }
+      .avatar-container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        position: relative;
+        aspect-ratio: 1;
+      }
+      .avatar-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1>Vlad Sadovskiy</h1>
-        <p class="subtitle">Fintech Entrepreneur & HPC Expert</p>
-      </header>
-
-      <main>
-        <div class="avatar-container">
-          <img
-            src="/vlad-s-jpg.jpg"
-            alt="Vlad Sadovskiy"
-            class="avatar-image"
-          />
-          <script
-            type="module"
-            src="/vlad.js"
-            data-name="did-agent"
-            data-mode="fabio"
-            data-client-key="Z29vZ2xlLW9hdXRoMnwxMDU2NTMxMjA2MzU0MDMxODIyNjA6T25GNWd5bEJodmh4OXVJTkhSdDRz"
-            data-agent-id="agt_2lzR3_rF"
-            data-monitor="true"
-          ></script>
-        </div>
-
-        <section class="content">
-          <div class="expertise">
-            <h2>Areas of Expertise</h2>
-            <ul>
-              <li>High-Performance Computing (HPC) in Fintech</li>
-              <li>Digital Banking Solutions</li>
-              <li>Small Business Enablement</li>
-              <li>Banking-as-a-Service</li>
-            </ul>
-          </div>
-
-          <div class="philosophy">
-            <h2>Entrepreneurial Philosophy</h2>
-            <blockquote>
-              "You don't become an entrepreneur until you lose. Failing
-              early—and often—provides valuable lessons."
-            </blockquote>
-          </div>
-
-          <div class="focus-areas">
-            <h2>Current Focus</h2>
-            <ul>
-              <li>B2B Payments Innovation</li>
-              <li>Real-time Processing Solutions</li>
-              <li>Digital Banking for SMBs</li>
-              <li>Compliance & Security</li>
-            </ul>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <p>© 2025 Vlad Sadovskiy</p>
-      </footer>
+      <div class="avatar-container">
+        <img src="/vlad-s-jpg.jpg" alt="Vlad Sadovskiy" class="avatar-image" />
+        <script
+          type="module"
+          src="./vlad.js"
+          data-name="did-agent"
+          data-mode="fabio"
+          data-client-key="Z29vZ2xlLW9hdXRoMnwxMDU2NTMxMjA2MzU0MDMxODIyNjA6T25GNWd5bEJodmh4OXVJTkhSdDRz"
+          data-agent-id="agt_2lzR3_rF"
+          data-monitor="true"
+        ></script>
+      </div>
     </div>
-    <script src="/script.js"></script>
   </body>
 </html>
