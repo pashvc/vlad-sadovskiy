@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< Updated upstream
     <title>Vlad Sadovskiy</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,120 +67,7 @@
       <footer>
         <p>© 2025 Vlad Sadovskiy</p>
       </footer>
-=======
-    <title>Vlad Sadovskiy - Conversation</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          sans-serif;
-        line-height: 1.6;
-        padding: 2rem;
-        background: #f5f5f5;
-      }
-
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      #response {
-        margin-top: 2rem;
-        padding: 1rem;
-        background: #f8f9fa;
-        border-radius: 8px;
-        white-space: pre-wrap;
-      }
-
-      .loading {
-        text-align: center;
-        padding: 2rem;
-        display: none;
-      }
-
-      .spinner {
-        width: 40px;
-        height: 40px;
-        border: 4px solid #f3f3f3;
-        border-top: 4px solid #3498db;
-        border-radius: 50%;
-        margin: 0 auto 1rem;
-        animation: spin 1s linear infinite;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      button {
-        padding: 0.5rem 1rem;
-        background: #0070f3;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1rem;
-      }
-
-      button:hover {
-        background: #0051cc;
-      }
-
-      button:disabled {
-        background: #ccc;
-        cursor: not-allowed;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Vlad Sadovskiy - AI Conversation</h1>
-      <button id="startConversation">Start Conversation</button>
-      <div class="loading" id="loading">
-        <div class="spinner"></div>
-        <p>Loading conversation...</p>
-      </div>
-      <div id="response"></div>
->>>>>>> Stashed changes
     </div>
-
-    <script>
-      document
-        .getElementById("startConversation")
-        .addEventListener("click", async () => {
-          const button = document.getElementById("startConversation");
-          const loading = document.getElementById("loading");
-          const response = document.getElementById("response");
-
-          button.disabled = true;
-          loading.style.display = "block";
-          response.textContent = "";
-
-          try {
-            const result = await fetch("/api/conversation");
-            const data = await result.json();
-            response.textContent = JSON.stringify(data, null, 2);
-          } catch (error) {
-            response.textContent = `Error: ${error.message}`;
-          } finally {
-            button.disabled = false;
-            loading.style.display = "none";
-          }
-        });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
