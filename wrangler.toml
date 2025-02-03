@@ -1,0 +1,10 @@
+[site]
+bucket = "."
+entry-point = "."
+
+[build]
+command = ""
+upload.format = "directory"
+
+[build.upload]
+format = "service-worker" 
